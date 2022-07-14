@@ -8,6 +8,14 @@ body{
     background-image: linear-gradient(to bottom, #009688 20%, #D7DBD7 18% 100%);
 }
 
+li{
+    padding: 0 10px;
+}
+
+i{
+    font-size: 20px;
+}
+
 .box{
     margin: 0 auto;
     height: 650px;
@@ -29,14 +37,7 @@ aside{
   background-color: #EAEAEA;
 }
 
-.username li{
-    list-style-type: none;
-    padding: 0 10px;
-}
 
-.username i{
-    font-size: 20px;
-}
 
 .username img{
     width: 50px;
@@ -50,10 +51,6 @@ aside{
     background-color: #8EDAFC;
 }
 
-.notify i{
-    font-size: 30px;
-    padding: 0 30px;
-}
 
 .search{
     padding-top: 10px;
@@ -81,22 +78,29 @@ aside{
 main{
     width: 70%;
 }
-main .text-panel{
+main .contact-info{
     height: 80px;
     background-color: #EAEAEA;
 }
 
-.text-panel li{
-list-style-type: none;
-padding: 0 10px;
-}
 
-.text-panel i{
-    font-size: 20px;
-}
-
-.text-panel img{
+.contact-info img{
     width: 50px;
     padding-left: 10px;
     padding-bottom: 5px;
+}
+
+.chat-panel{
+    height: calc(100% - 160px);
+    background-image: url(../img/mine.jpg);
+}
+
+.type-panel input{
+    width: 650px;
+    height: 40px;
+    font-size: 1rem;
+}
+
+.bi-emoji-smile, .bi-mic-fill{
+    font-size: 30px;
 }
