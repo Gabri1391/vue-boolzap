@@ -138,7 +138,9 @@ const root = new Vue ({
 
             this.contacts[this.activeIndex].messages.push(myMessage);
 
-          
+            setTimeout(() => {
+                this.contacts[this.activeIndex].messages.push(contactMessage)
+            }, 2000);
         },
 
     }
