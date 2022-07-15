@@ -116,6 +116,11 @@ const root = new Vue ({
             }
           ]
     },
+    methods: {
 
+        setCurrentContact(index) {
+            this.currentIndex = index;
+        }
+    }
 });
 
