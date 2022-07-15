@@ -113,11 +113,11 @@ main .contact-info{
     justify-content: flex-start;
 }
 
-.message-container.message-container.sent .message{
+.message-container.sent .message{
     background-color: #d5f9ba;
 }
 
-.message-container.message-container.recived .message{
+.message-container.recived .message{
     background-color: #fff;
 }
 
