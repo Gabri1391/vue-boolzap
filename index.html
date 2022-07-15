@@ -15,7 +15,7 @@
     <title>Boolzapp: the NEW APP to chat!</title>
 </head>
 <body>
-    <div class="container">
+    <div class="container" id="root">
         <div class="box d-flex">
             <aside>
                 <div class="username d-flex justify-content-between align-items-center">
@@ -42,28 +42,12 @@
                 <div class="search">
                     <input class="ps-5" type="text" placeholder = " Cerca o inizia una nuova chat">
                 </div>
-                <div class="main-side">
-                    <div class="col-12 d-flex align-items-center border-bottom border-1">
-                        <img class="rounded-circle p-3" src="/img/avatar_1.jpg" alt="Avatar 3">
-                        <span>Flavio</span>
-                    </div>
-                    <div class="col-12 d-flex align-items-center border-bottom border-1">
-                        <img class="rounded-circle p-3" src="/img/avatar_3.jpg" alt="Avatar 3">
-                        <span>Stefano</span>
-                    </div>
-                    <div class="col-12 d-flex align-items-center border-bottom border-1">
-                        <img class="rounded-circle p-3" src="/img/avatar_4.jpg" alt="Avatar 3">
-                        <span>Giovanni</span>
-                    </div>
-                    <div class="col-12 d-flex align-items-center border-bottom border-1">
-                        <img class="rounded-circle p-3" src="/img/avatar_6.jpg" alt="Avatar 3">
-                        <span>Alessia</span>
-                    </div>
-                    <div class="col-12 d-flex align-items-center border-bottom border-1">
-                        <img class="rounded-circle p-3" src="/img/avatar_7.jpg" alt="Avatar 3">
-                        <span>Cristiano</span>
-                    </div>
-                </div>
+                <ul class="main-side">
+                    <li v-for="contact in contacts" class="col-12 d-flex align-items-center border-bottom border-1">
+                        <img class="rounded-circle p-3" :src="`img/avatar${contact.avatar}.jpg`">
+                        <span>{{contact.name}}</span>
+                    </li>
+                </ul>
             </aside>
             <main>
                 <div class="contact-info d-flex justify-content-between align-items-center">
@@ -96,7 +80,7 @@
             </main>
 
         </div>
-    </div>
-    
+    </div> 
+    <script src="js/script.js"></script>
 </body>
 </html>
