@@ -4,7 +4,7 @@ const root = new Vue ({
     data:{
         user:{
             name: 'Gabriele Chiarello',
-            avatar: '_io'
+            avatar: '_4'
         },
         contacts: [
             {
@@ -21,7 +21,7 @@ const root = new Vue ({
             },
             {
               name: 'Alessia',
-              avatar: '_4',
+              avatar: '_io',
             },
             {
                 name: 'Cristiano',

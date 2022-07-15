@@ -20,8 +20,8 @@
             <aside>
                 <div class="username d-flex justify-content-between align-items-center">
                     <div class="d-flex justify-content-between align-items-center">
-                        <img class="rounded-circle" src="img/avatar_2.jpg" alt="">
-                        <span class="ps-2">Gabriele Chiarello</span>
+                        <img class="rounded-circle" :src="`img/avatar${user.avatar}.jpg`" alt="">
+                        <span class="ps-2">{{user.name}}</span>
                     </div>
                     <ul class="d-flex justify-content-between align-items-center pe-3 list-unstyled">
                         <li><i class="bi bi-send-fill"></i></li>
