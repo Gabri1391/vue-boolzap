@@ -67,7 +67,7 @@
                 <div class="chat-panel">
                     <ul class="px-3">
                         <li v-for="(message,index) in contacts[activeIndex].messages" class="message-container p-3">
-                            <div class="message sent p-2 rounded-3">
+                            <div v-if="message.status === 'sent'" class="message sent p-2 rounded-3">
                                 <p>{{message.text}}</p>
                                 <div class="time">{{message.date}}</div>
                             </div>
