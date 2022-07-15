@@ -3,6 +3,7 @@ Vue.config.devtools = true;
 const root = new Vue ({
     el:'#root',
     data:{
+        newMessage: '',
         activeIndex:0,
         user:{
             name: 'Gabriele Chiarello',
@@ -120,7 +121,26 @@ const root = new Vue ({
 
         setCurrentContact(index) {
             this.activeIndex = index;
-        }
+        },
+
+        addMessage(){
+            const myMessage = {
+                date: "17/07/2022 16:28:40",
+                text: this.newMessage,
+                status: "sent",
+            };
+
+            const contactMessage = {
+                date: "17/07/2022 16:30:50",
+                text: 'Ok!',
+                status: "received",
+            };
+
+            this.contacts[this.activeIndex].messages.push(myMessage);
+
+          
+        },
+
     }
 });
 
