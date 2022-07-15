@@ -8,8 +8,8 @@ const root = new Vue ({
         },
         contacts: [
             {
-              name: 'Flavio',
-              avatar: '_1',
+              name: 'Alessia',
+              avatar: '_io',
             },
             {
               name: 'Stefano',
@@ -20,8 +20,8 @@ const root = new Vue ({
               avatar: '_3',
             },
             {
-              name: 'Alessia',
-              avatar: '_io',
+              name: 'Flavio',
+              avatar: '_4',
             },
             {
                 name: 'Cristiano',
