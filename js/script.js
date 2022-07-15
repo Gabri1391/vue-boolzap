@@ -16,17 +16,17 @@ const root = new Vue ({
               messages: [{
                 date: '10/01/2020 15:30:55',
                 text: 'Hai portato a spasso il cane?',
-                status: 'sent'
+                status: 'received'
               },
               {
                 date: '10/01/2020 15:50:00',
                 text: 'Ricordati di dargli da mangiare',
-                status: 'sent'
+                status: 'received'
               },
               {
                 date: '10/01/2020 16:15:22',
-                text: 'Tutto fatto!',
-                status: 'received'
+                text: 'Fatto tutte e due! Sei stupita eh?',
+                status: 'sent'
               }
               ],
             },
@@ -37,17 +37,17 @@ const root = new Vue ({
               messages: [{
                 date: '10/01/2020 15:30:55',
                 text: 'Hola! come va? Birretta stasera?',
-                status: 'sent'
+                status: 'received'
               },
               {
                 date: '10/01/2020 15:50:00',
                 text: '18.30 al pub?',
-                status: 'sent'
+                status: 'received'
               },
               {
                 date: '10/01/2020 16:15:22',
                 text: 'Stasera devo finire il progetto! Sarà per la prossima volta..',
-                status: 'received'
+                status: 'sent'
               }
               ],
             },
@@ -78,17 +78,17 @@ const root = new Vue ({
               visible: true,
               messages: [{
                 date: '10/01/2020 15:30:55',
-                text: 'Hai portato a spasso il cane?',
-                status: 'sent'
+                text: 'Quando è Milan-Torino? Prendiamo i biglietti?',
+                status: 'received'
               },
               {
                 date: '10/01/2020 15:50:00',
-                text: 'Ricordati di dargli da mangiare',
+                text: 'Settimana prossima escono! Per forza! Forza Milan però..eheheh',
                 status: 'sent'
               },
               {
                 date: '10/01/2020 16:15:22',
-                text: 'Tutto fatto!',
+                text: 'Forza Toro!',
                 status: 'received'
               }
               ],
@@ -99,18 +99,18 @@ const root = new Vue ({
                 visible: true,
               messages: [{
                 date: '10/01/2020 15:30:55',
-                text: 'Hai portato a spasso il cane?',
+                text: "Quando facciamo l'asta del Fantacalcio?",
                 status: 'sent'
               },
               {
                 date: '10/01/2020 15:50:00',
-                text: 'Ricordati di dargli da mangiare',
-                status: 'sent'
+                text: 'Il 3 agosto,tu ci sei vero?',
+                status: 'received'
               },
               {
                 date: '10/01/2020 16:15:22',
-                text: 'Tutto fatto!',
-                status: 'received'
+                text: 'Per forza hermano! Devo difendere il mio primo posto :D',
+                status: 'sent'
               }
               ],
             }
@@ -119,7 +119,7 @@ const root = new Vue ({
     methods: {
 
         setCurrentContact(index) {
-            this.currentIndex = index;
+            this.activeIndex = index;
         }
     }
 });

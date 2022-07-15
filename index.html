@@ -43,18 +43,18 @@
                     <input class="ps-5" type="text" placeholder = " Cerca o inizia una nuova chat">
                 </div>
                 <ul class="main-side">
-                    <li v-for="contact in contacts" class="col-12 d-flex align-items-center border-bottom border-1">
+                    <li v-for="(contact,index) in contacts" class="col-12 d-flex align-items-center border-bottom border-1" role="button" @click="setCurrentContact(index)">
                         <img class="rounded-circle p-3" :src="`img/avatar${contact.avatar}.jpg`">
                         <span>{{contact.name}}</span>
                     </li>
                 </ul>
             </aside>
             <main>
-                <div class="contact-info d-flex justify-content-between align-items-center">
+                <div v-for="(contact, index) in contacts" v-if="activeIndex === index" class="contact-info d-flex justify-content-between align-items-center">
                     <div class="d-flex justify-content-between align-items-center">
-                        <img class="rounded-circle" src="img/avatar_io.jpg" alt="">
+                        <img class="rounded-circle" :src="`img/avatar${contact.avatar}.jpg`" alt="contact.name">
                         <div class="ps-3">
-                            <div>Alessia</div>
+                            <div>{{contact.name}}</div>
                             <div class="text-secondary">Ultimo accesso oggi alle</div>
                         </div>
                     </div>
@@ -66,7 +66,7 @@
                 </div>
                 <div class="chat-panel">
                     <ul class="px-3">
-                        <li v-for="(message,index) in contacts[activeIndex].messages" :class="(message.status === 'sent' ? 'message-container sent p-3 ' : 'message-container recived p-3')">
+                        <li v-for="(message, index) in contacts[activeIndex].messages" :class="(message.status === 'sent' ? 'message-container sent p-3 ' : 'message-container recived p-3')">
                             <div v-if="message.status === 'sent'" class="p-2 rounded-3 message sent">
                                 <p>{{message.text}}</p>
                                 <div class="time">{{message.date}}</div>
