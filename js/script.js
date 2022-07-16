@@ -4,6 +4,7 @@ const root = new Vue ({
     el:'#root',
     data:{
         newMessage: '',
+        search: '',
         activeIndex:0,
         user:{
             name: 'Gabriele Chiarello',
@@ -114,8 +115,15 @@ const root = new Vue ({
                 status: 'sent'
               }
               ],
-            }
+            },
           ]
+    },
+    computed: {
+      filteredContacts() {
+        return this.contacts.filter(contact => {
+          return contact.name.toLowerCase().includes(this.search.toLowerCase())
+        })
+      }
     },
     methods: {
 
@@ -132,7 +140,7 @@ const root = new Vue ({
 
             const contactMessage = {
                 date: "17/07/2022 16:30:50",
-                text: 'Ok!',
+                text: 'OK!',
                 status: "received",
             };
 

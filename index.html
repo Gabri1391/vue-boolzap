@@ -40,10 +40,10 @@
 
                 </div>
                 <div class="search">
-                    <input class="ps-5" type="text" placeholder = " Cerca o inizia una nuova chat">
+                    <input v-model="search" class="ps-5" type="text" placeholder = " Cerca o inizia una nuova chat">
                 </div>
                 <ul class="main-side">
-                    <li v-for="(contact,index) in contacts" class="col-12 d-flex align-items-center border-bottom border-1" role="button" @click="setCurrentContact(index)">
+                    <li v-for="(contact,index) in filteredContacts" class="col-12 d-flex align-items-center border-bottom border-1" role="button" @click="setCurrentContact(index)">
                         <img class="rounded-circle p-3" :src="`img/avatar${contact.avatar}.jpg`">
                         <span>{{contact.name}}</span>
                     </li>
