@@ -151,6 +151,10 @@ const root = new Vue ({
             }, 2000);
         },
 
+        getNotificationActive(){
+          return alert('hai attivato le notifiche dei messaggi!');
+        }
+
     }
 });
 
