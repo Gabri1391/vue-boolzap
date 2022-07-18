@@ -4,6 +4,7 @@ dayjs.extend(dayjs_plugin_customParseFormat);
 
 const date = dayjs('2022-07-18 11:34:10').format('DD/MM/YYYY HH:mm:ss');
 
+
 const root = new Vue ({
     el:'#root',
     data:{
@@ -20,17 +21,17 @@ const root = new Vue ({
               avatar: '_io',
               visible: true,
               messages: [{
-                date: '10/01/2020 15:30:55',
+                date: '15/07/2022 15:30:55',
                 text: 'Hai portato a spasso il cane?',
                 status: 'received'
               },
               {
-                date: '10/01/2020 15:50:00',
+                date: '15/07/2022 15:50:00',
                 text: 'Ricordati di dargli da mangiare',
                 status: 'received'
               },
               {
-                date: '10/01/2020 16:15:22',
+                date: '15/07/2022 16:15:22',
                 text: 'Fatto tutte e due! Sei stupita eh?',
                 status: 'sent'
               }
@@ -160,6 +161,10 @@ const root = new Vue ({
 
         getNotificationActive(){
           return alert('hai attivato le notifiche dei messaggi!');
+        },
+
+        getDate(){
+          return day.js(this.date).format('DD/MM/YYYY HH:mm:ss');
         }
 
     }

@@ -49,7 +49,11 @@
                 <ul class="main-side">
                     <li v-for="(contact,index) in filteredContacts" class="col-12 d-flex align-items-center border-bottom border-1" role="button" @click="setCurrentContact(index)">
                         <img class="rounded-circle p-3" :src="`img/avatar${contact.avatar}.jpg`">
-                        <span>{{contact.name}}</span>
+                        <div>
+                            <span>{{contact.name}}</span> 
+                            <div class="text-secondary"> {{ contact.messages[contact.messages.length - 1].text}} </div>
+                            <div class="text-secondary"> {{ contact.messages[contact.messages.length - 1].date}} </div>
+                        </div>
                     </li>
                 </ul>
             </aside>
@@ -59,7 +63,7 @@
                         <img class="rounded-circle" :src="`img/avatar${contact.avatar}.jpg`" alt="contact.name">
                         <div class="ps-3">
                             <div>{{contact.name}}</div>
-                            <div class="text-secondary">Ultimo accesso oggi alle</div>
+                            <div class="text-secondary">Ultimo accesso oggi alle {{ contact.messages[contact.messages.length - 1].date}} </div>
                         </div>
                     </div>
                     <ul class="d-flex justify-content-between align-items-center pe-3 list-unstyled">

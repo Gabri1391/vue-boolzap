@@ -73,6 +73,14 @@ aside{
     width: 80px;
 }
 
+.main-side li span{
+    font-size: 16px;
+}
+
+.main-side li div{
+    font-size: 12px;
+}
+
 /* MAIN */
 main{
     width: 70%;
