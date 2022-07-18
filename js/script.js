@@ -3,7 +3,7 @@ Vue.config.devtools = true;
 const root = new Vue ({
     el:'#root',
     data:{
-        newMessage: '',
+        newText: '',
         search: '',
         activeIndex:0,
         user:{
@@ -132,9 +132,10 @@ const root = new Vue ({
         },
 
         addMessage(){
+          if(!this.newText)return;
             const myMessage = {
                 date: "17/07/2022 16:28:40",
-                text: this.newMessage,
+                text: this.newText,
                 status: "sent",
             };
 
@@ -145,6 +146,8 @@ const root = new Vue ({
             };
 
             this.contacts[this.activeIndex].messages.push(myMessage);
+            this.newText = '';
+            
 
             setTimeout(() => {
                 this.contacts[this.activeIndex].messages.push(contactMessage)
