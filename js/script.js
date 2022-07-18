@@ -1,5 +1,9 @@
 Vue.config.devtools = true;
 
+dayjs.extend(dayjs_plugin_customParseFormat);
+
+const date = dayjs('2022-07-18 11:34:10').format('DD/MM/YYYY HH:mm:ss');
+
 const root = new Vue ({
     el:'#root',
     data:{
